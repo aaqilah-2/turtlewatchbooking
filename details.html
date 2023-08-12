@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="description" content="Average">
+        <title>Details page</title>
+       
+        <link href="details.css" rel="stylesheet" >
+        <link rel="stylesheet" href="international-telephone-input.css">
+        <header>
+            <label class="logo">
+                BUY TICKETS
+            </label>
+        </header>
+    <body>
+        <h2>Enter your details</h2><br><br><br>
+    <div class="container">
+
+        <table id="ticketTable" >
+            <tr id="rowFullName">
+                <td>Name</td>
+                <td id="fullNameTable"></td> 
+            </tr>  
+            <tr>
+                <td>Date</td>
+                <td id="tableinputdate"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="tableinputtime"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="tableinputduration"></td>
+            </tr>
+            <tr id="rowMobileNum">
+                <td>Moblie</td>
+                <td id="phoneTable"></td>
+            </tr>
+            <tr id="rowEmail">
+                <td>email</td>
+                <td id="emailTable"></td>
+            </tr>
+            <tr id="rowGender">
+                <td>Gender</td>
+                <td id="genderTable"></td>
+            </tr>
+            <tr>
+                <th>Tickets</th>
+                <th>Charges</th>
+            </tr>
+            <tr id="rowlocaladult">
+                <td id="localadulttable"> Sl adult</td>
+                <td id="localadulttableprice"></td>
+            </tr>
+            <tr id="rowlocalchild">
+                <td id="localchildtable"> Sl child</td>
+                <td id="localchildtableprice"></td>
+            </tr>
+            <tr id="rowforiegnadult">
+                <td id="foriegnadulttable"> foreigner adult</td>
+                <td id="foriegnadulttableprice"></td>
+            </tr>
+            <tr id="rowforiegnchild">
+                <td id="foriegnchildtable"> foreigner child</td>
+                <td id="foriegnchildtableprice"></td>
+            </tr>
+            <tr id="rowinfant">
+                <td id="infanttable"> infant</td>
+                <td id="infanttableprice"></td>
+            </tr>
+            <tr>
+                <th>Total Payable </th>
+                <th id="totalPayableprice"> $0</th>
+            </tr>
+        </table>  
+        
+       
+        <form id="detailsForm" method="get" action="payments.html">
+           
+                
+                <div class="form-control"  id="fullNameControl"> 
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name"  name="name" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-control">
+                    <label for="phone"><p class="phone-label">Moblie Number:</p></label><br>
+                    <div class="iti">
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-control" id="emailControl">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email"  name="email" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-control" id="confirmEmailControl">
+                    <label for="confirmemail">Confirm Email:</label>
+                    <input type="email" id="confirmemail"  name="confirmemail" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-control">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="select" selected disabled>Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <span></span>
+                </div>
+           <br><br>
+
+            
+                
+            </div>
+
+            <button type="submit" id="btn" ><i>Continue With Purchase</i></button>
+            
+        </form>
+   
+
+   
+        <br><br>
+
+        
+
+        <script src="international-telephone-input.js"></script>
+        <script src="details.js"> </script>
+    </body>
+</html>

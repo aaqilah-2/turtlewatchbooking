@@ -1,0 +1,209 @@
+header{
+    background-color: green;
+    height: 100px;
+    width: 100%;
+    position: relative;
+}
+
+label.logo{
+    color: white;
+    font-size: 60px;
+    margin-left: 38%;
+    font-weight: bold;
+    line-height: 80px;
+    
+}
+
+button {
+    color: #FFF;
+    background-color: #428BCA;
+    border: 1px solid #357EBD;
+    height: 39px;
+    margin: 0;
+    padding: 6px 20px;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+button:hover {
+    background-color: #3276B1;
+    border-color: #285E8E;
+    cursor: pointer;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+
+form input{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-control.success input{
+    border:3px solid green;
+    
+}
+
+.form-control.error input{
+    border:3px solid red;
+    
+}
+h2{
+    text-align: center;
+}
+
+span{
+    color: red;
+    font-size: small;
+}
+
+
+/* CSS to collapse the table when all rows are hidden */
+#ticketTable{
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 740px;
+}
+#ticketTable th{
+    width: 300px;
+    margin: auto;
+    padding: 5px;
+    background-color: #ddd6d6;
+    
+    border: 1px solid black;
+    position: relative;
+    text-align: center;
+    align-content: center;
+}
+#ticketTable td{
+    width: 300px;
+    margin: auto;
+    padding: 5px;    
+    border: 1px solid black;
+    position: relative;
+    text-align: center;
+    align-content: center;
+} 
+
+/* CSS to hide rows without gaps */
+.hidden-row {
+    display: none;
+  }
+  
+  #ticketTable {
+    border-collapse: collapse;
+  }
+
+  
+
+button{
+    cursor: pointer;
+}
+
+
+
+
+  
+
+  
+button {
+    color: #FFF;
+    background-color: #007bff8b;
+    border: 1px solid #357EBD;
+    height: 39px;
+    margin-left: 4%;
+    padding: 6px 20px;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+button:hover {
+    background-color: #3276B1;
+    border-color: #285E8E;
+    cursor: pointer;
+}
+
+.container{
+    margin-left: 15%;
+}
+
+form label {
+    display: block;
+    margin: 10px;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+form input{
+    display: block;
+    margin: 10px;
+
+}
+form select{
+    display: block;
+    margin: 10px;
+}
+
+.container2{
+   margin-top: -40%;
+    margin-right: 15%;
+}
+
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+table{
+    margin-right: 10%;
+}
+
+th, td, tr{
+    padding: 10px;
+    border: 2px solid #000000;
+}
+
+h2{
+    text-align: center;
+}
+
+
+form{
+margin-top: -20%;
+margin-left: 25%;
+}
+
+select{
+    width: 16%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container2{
+        margin-top: 4%;
+    }
+  
+
+}
+  
+
+
+  
+
+  
+  

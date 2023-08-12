@@ -1,0 +1,400 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*start of navigation code*/
+nav{
+    
+    width: 100%;
+    height: 85px;
+    top: 0; /*just added now*/
+    z-index: 1; /*just added now*/
+    line-height: 85px;
+    padding: 0px 100px; /*0px is for top & bottom, 100px is for left & right */
+    position: fixed;
+    background-image: linear-gradient(#18f0ec, #2ae3fb); /*in linear grad. can add min. 2 colors */
+   
+     
+}
+nav .logo p{                  /* after nav if you don't put a space it does not work*/
+    font-size: 50px;
+    font-weight: bold;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-align: left;
+
+}
+nav ul{
+    float: right;
+}
+nav li{
+    display: inline-block;
+    list-style: none; /*bcus we don't want bullets */
+    
+}
+nav li a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10.5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    color:white;
+    text-decoration: none; /* links bydefault are underlined, so remove it*/
+    border-radius: 5px;
+}
+nav li a:hover{ /*the color that appears inside the nav link when you move your cursor over it*/
+    color: rgb(0, 0, 0);
+    transition: all 0.4s ease 0s;
+}
+
+a.active, a:hover{
+    background: rgb(1, 209, 237);
+    transition: all 0.4s ease 0s;
+    padding: 10px 10px;
+    
+}
+nav ul li ul{
+    position: absolute;
+    display: none;
+    background-color: #37e2e0;
+    border-radius: 0px 0px 5px 5px;
+
+}
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li{
+    line-height: 1;
+    width: 140px;
+    border-radius: 5px;
+    padding: 6px;
+    display: block;
+    margin-left: 15%;
+    padding-bottom: 15px;
+
+}
+nav ul li ul li a{
+    padding: 10px 16px;
+
+}
+nav ul li ul li a:hover{
+    background-color: rgb(1, 209, 237);
+
+}
+nav ul li a:hover{
+    background-color: rgb(1, 209, 237);
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+      height: auto;
+      line-height: inherit;
+      padding: 4px;
+      position: static;
+      margin-top: -12.5%;
+    }
+  
+    nav .logo p{
+      float: none;
+      text-align: center;
+    }
+  
+    nav ul{
+      float: none;
+      text-align: center;
+      padding: 0;
+    }
+    nav li{
+      display: block;
+      margin-bottom: 10px;
+    }
+    nav li a{
+      display: block;
+      padding: 6px 0;
+    }
+    nav ul li ul{
+      position: static;
+      display: none;
+      background-color: #37e2e0 ;
+      border-radius: 0;
+    }
+    nav ul li:hover ul{
+      display: block;
+    }
+    nav ul li ul li{
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+                             /*end of navigation code*/
+
+.bgimage{
+   
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+.bgimage img{
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+}
+
+body{
+    padding-top: 85px; /* this value should be the same as the navbar height*/ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+/*textoverlay on bgimage*/
+.imagetext{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 35%;
+    background-color: rgb(202, 185, 185);
+    box-shadow: 5px 5px 10px white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;    
+}
+
+.imagetext:hover{
+    background-color: #a3e4e3;
+}
+.imagetext h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.button{
+   
+    border-radius: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+   
+}
+.button:hover{
+    background-color: greenyellow;
+    color: black;
+}
+/*intro*/
+.text0 h1{
+            text-align: center;
+            font-size: 30px;
+            color: rgb(3, 93, 3);
+            font-weight: bolder;
+           
+}
+.text0 p{
+margin-left: 10%;
+margin-right: 10%;
+text-align: center;
+font-size: 20px;
+display: flex;
+}
+
+/*section 1*/
+
+.section1{
+
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+    align-items: center;
+    text-align: center;
+ }
+
+.sec1{
+    flex: 0 0 100%;
+}
+
+.textcontain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+
+.ulist{
+    list-style-type: square; /* no change whether you put left or dont bcus default is left*/
+    font-size: 20px;   
+    margin-left: 40%;
+}
+
+.ulist li{
+    padding-bottom: 13px;
+}
+.text1{
+    margin: 1% 2%;
+    width: 35%;
+    box-sizing: border-box; 
+}
+
+.text1:hover{
+    background-color: #a3e4e3;
+}
+.text1 p{
+    margin: 1% auto 3%;
+    font-size: 20px; 
+    background: #94e4e2;
+    padding: 20px;
+    box-sizing: border-box;  
+
+}
+
+.responsive-image1{
+    max-width: 100%; /*ensures that the image does not exceed the width of its container and scales proportionally.*/
+    height: auto; /* maintains the image's aspect ratio as it adjusts to the container width.*/
+    margin: 0 auto;/*centers the image horizontally within its container.*/
+    width: 25%; /* Adjust this value as desired */
+    display: block;
+}
+
+/*section 2*/
+
+.sec2{
+    flex: 0 0 100%;
+}
+
+.responsive-image{
+
+    max-width: 100%; /*ensures that the image does not exceed the width of its container and scales proportionally.*/
+    height: auto; /* maintains the image's aspect ratio as it adjusts to the container width.*/
+    margin: 0 auto;/*centers the image horizontally within its container.*/
+    width: 25%; /* Adjust this value as desired */
+}
+
+.section2{
+    text-align: center;
+}
+
+h2{
+    font-size: 26px;
+    
+    text-align: center;
+    color: #ff6b1b;
+}
+
+
+.olist{
+    
+    list-style-type: upper-roman;
+    text-align: left; /* no change whether you put left or dont bcus default is left*/
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 20px;  
+}
+
+.olist li{
+    padding-bottom: 20px;
+}
+
+.numlist{
+    background-color: rgb(127, 254, 111);
+    padding: 3px;
+}
+
+
+.text-wrap{
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 10px;
+    margin: 0;  
+}
+
+/*section3*/
+
+
+.responsive-image2{
+
+    max-width: 100%; 
+    height: auto; 
+    width: 35%; 
+}
+
+.imagemerge{
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.ulist2{
+
+    list-style-type: square;
+    text-align: left; /* no change whether you put left or dont bcus default is left*/
+    margin-top: 2%;
+    margin-left: 15%;
+    font-size: 20px;
+    
+}
+
+.list{
+    border-style: double;
+    background-color: rgb(127, 254, 111);
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ulist2 li{
+    padding-bottom: 13px;   
+}
+
+/*footer css*/
+footer{
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    padding:20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 768px) {
+
+    .text1{
+        width: 90%;
+    }
+
+    .ulist2 li{
+        width: 100%;
+    }
+    .ulist{
+        margin-left: 17%;
+        width: 80%;
+    }
+   
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

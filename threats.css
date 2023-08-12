@@ -1,0 +1,307 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+/*start of navigation code*/
+nav{
+   
+    width: 100%;
+    height: 85px;
+    top: 0; /*just added now*/
+    z-index: 1; /*just added now*/
+    line-height: 85px;
+    position: absolute;
+    padding: 0px 100px; /*0px is for top & bottom, 100px is for left & right */
+    background-image: linear-gradient(#18f0ec, #2ae3fb); /*in linear grad. can add min. 2 colors */
+     
+}
+nav .logo p{                  /* after nav if you don't put a space it does not work*/
+    font-size: 50px;
+    font-weight: bold;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-align: left;
+
+}
+nav ul{
+    float: right;
+}
+nav li{
+    display: inline-block;
+    list-style: none; /*bcus we don't want bullets */
+    
+}
+nav li a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10.5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    color:white;
+    text-decoration: none; /* links bydefault are underlined, so remove it*/
+    border-radius: 5px;
+}
+nav li a:hover{ /*the color that appears inside the nav link when you move your cursor over it*/
+    color: rgb(0, 0, 0);
+    transition: all 0.4s ease 0s;
+}
+
+a.active, a:hover{
+    background: rgb(1, 209, 237);
+    transition: all 0.4s ease 0s;
+    padding: 10px 10px;
+    
+}
+nav ul li ul{
+    position: absolute;
+    display: none;
+    background-color: #37e2e0;
+    border-radius: 0px 0px 5px 5px;
+
+}
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li{
+    line-height: 1;
+    width: 140px;
+    border-radius: 5px;
+    padding: 6px;
+    display: block;
+    margin-left: 15%;
+    padding-bottom: 15px;
+
+}
+nav ul li ul li a{
+    padding: 10px 16px;
+
+}
+nav ul li ul li a:hover{
+    background-color: rgb(1, 209, 237);
+
+}
+nav ul li a:hover{
+    background-color: rgb(1, 209, 237);
+}
+
+
+@media screen and (max-width: 768px) {
+  nav{
+    height: auto;
+    line-height: inherit;
+    padding: 4px;
+    position: static;
+    margin-top: -12.5%;
+  }
+
+  nav .logo p{
+    float: none;
+    text-align: center;
+  }
+
+  nav ul{
+    float: none;
+    text-align: center;
+    padding: 0;
+  }
+  nav li{
+    display: block;
+    margin-bottom: 10px;
+  }
+  nav li a{
+    display: block;
+    padding: 6px 0;
+  }
+ 
+  nav ul li ul{
+    position: static;
+    display: none;
+    background-color: #37e2e0 ;
+    border-radius: 0;
+  }
+  nav ul li:hover ul{
+    display: block; 
+  }
+  
+  nav ul li ul li{
+    width: 100%;
+    margin-left: 0;
+  }
+}
+                             /*end of navigation code*/
+
+.bgimage{
+   
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+.bgimage img{
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+}
+
+body{
+    padding-top: 85px; /* this value should be the same as the navbar height*/ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ff9735;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.container h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #020337;
+}
+
+.container h3{
+    font-size: 1.875rem;
+    margin-bottom: 10px;
+    font-style: italic;
+    color: white;
+}
+.image{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image img{
+    max-width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+.container:hover{
+    background-color: rgb(142, 157, 255);
+    color: white;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    .container{
+        padding: 10px;
+        font-size: 1rem;
+        margin-bottom: 15px; 
+    }
+    .container h2{
+        font-size: 2rem;
+        margin-bottom: 15px;
+        background-color: pink;
+    }
+    .container h3{
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+  
+}
+
+
+
+
+.button1{
+    border-radius: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(10, 166, 213);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+    transform: translate(80%, -120%); /*left/right    up/down*/
+    margin-right: 13px;
+    
+}
+
+
+.button1:hover{
+    background-color: greenyellow;
+    color: black;
+}
+
+
+
+
+.imagetext{
+
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 27%;
+    background-color: rgb(202, 185, 185);
+    box-shadow: 5px 5px 10px white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    
+}
+
+.imagetext:hover{
+   background-color: #00adf1;
+}
+
+
+.imagetext #bg-text{
+
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h1{
+    margin-top: -2.5%;
+    text-transform: uppercase;
+    font-size: 35px;
+    background-color: #f4c76fa8;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#my-head{
+
+    margin-left: 40%;
+    text-transform: capitalize;
+    font-size: 30px;
+    background-color: #f3da4b;
+    padding: 10px;
+    width: 22%;
+    text-align: center;
+}
+
+/*footer css*/
+footer{
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    padding:20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+
+
+
+

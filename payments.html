@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="description" content="Average">
+        <title>Paymemts page</title>
+        <link href="payments.css" rel="stylesheet" >
+        <header>
+            <label class="logo">
+                BUY TICKETS
+            </label>
+        </header>
+    <body><br>
+        <h2>Payment Details</h2><br><br>
+        <table id="ticketTable" >
+            <tr>
+                <td>Date</td>
+                <td id="tableinputdate"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="tableinputtime"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="tableinputduration"></td>
+            </tr>
+            <tr>
+                <th>Tickets</th>
+                <th>Charges</th>
+            </tr>
+            <tr id="rowlocaladult">
+                <td id="localadulttable"> Sl adult</td>
+                <td id="localadulttableprice"></td>
+            </tr>
+            <tr id="rowlocalchild">
+                <td id="localchildtable"> Sl child</td>
+                <td id="localchildtableprice"></td>
+            </tr>
+            <tr id="rowforiegnadult">
+                <td id="foriegnadulttable"> foreigner adult</td>
+                <td id="foriegnadulttableprice"></td>
+            </tr>
+            <tr id="rowforiegnchild">
+                <td id="foriegnchildtable"> foreigner child</td>
+                <td id="foriegnchildtableprice"></td>
+            </tr>
+            <tr id="rowinfant">
+                <td id="infanttable"> infant</td>
+                <td id="infanttableprice"></td>
+            </tr>
+            <tr>
+                <th>Total Payable </th>
+                <th id="totalPayableprice"> $0</th>
+            </tr>
+        </table>
+     
+        
+       
+        <form id="paymentForm"  action="confirmation.html" method="get">
+        
+               
+
+                <div class="form-control">
+                    <label for="cardNumber">Card number</label>
+                    <input type="text" id="cardNumber"  name="cardNumber" required>
+                    <span></span>
+                </div>
+
+                <div class="form-control">
+                    <label for="expiaryDate">Expiary date</label>
+                    <input type="text" id="expiaryDate"  name="expiaryDate" required>
+                    <span></span>
+                </div>
+
+                <div class="form-control">
+                    <label for="verification">CVC / CVV</label>
+                    <input type="text" id="verification"  name="verification" required>
+                    <span></span>
+                </div>
+
+                <div class="form-control">
+                    <label for="cardName">Name on card</label>
+                    <input type="text" id="cardName"  name="cardName" required>
+                    <span></span>
+                </div>
+
+
+                
+           <br>
+            <button type="submit" id="payButton">Pay</button>
+            
+        </form>
+        
+        <script src="payments.js"> </script>
+    </body>
+</html>

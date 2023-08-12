@@ -1,0 +1,490 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*start of navigation code*/
+nav{
+ 
+
+    width: 100%;
+    height: 85px;
+    top: 0; /*just added now*/
+    z-index: 1; /*just added now*/
+    line-height: 85px;
+    padding: 0px 100px; /*0px is for top & bottom, 100px is for left & right */
+    position: fixed;
+    background-image: linear-gradient(#18f0ec, #2ae3fb); /*in linear grad. can add min. 2 colors */
+     
+}
+nav .logo p{                  /* after nav if you don't put a space it does not work*/
+    font-size: 50px;
+    font-weight: bold;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-align: left;
+
+}
+nav ul{
+  float: right;
+  
+}
+nav li{
+    display: inline-block;
+    list-style: none; /*bcus we don't want bullets */
+    
+}
+nav li a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    color:white;
+    text-decoration: none; /* links bydefault are underlined, so remove it*/
+    border-radius: 5px;
+}
+nav li a:hover{ /*the color that appears inside the nav link when you move your cursor over it*/
+    color: rgb(0, 0, 0);
+    transition: all 0.4s ease 0s;
+}
+
+
+a.active, a:hover{
+    background: rgb(1, 209, 237);
+    transition: all 0.4s ease 0s;
+    padding: 10px 10px;
+    
+}
+nav ul li ul{
+    position: absolute;
+    display: none;
+    background-color: #37e2e0;
+    border-radius: 0px 0px 5px 5px;
+
+}
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li{
+    line-height: 1;
+    width: 140px;
+    border-radius: 5px;
+    padding: 6px;
+    display: block;
+    margin-left: 15%;
+    padding-bottom: 15px;
+
+}
+nav ul li ul li a{
+    padding: 10px 16px;
+
+}
+nav ul li ul li a:hover{
+    background-color: rgb(1, 209, 237);
+
+}
+nav ul li a:hover{
+    background-color: rgb(1, 209, 237);
+}
+@media screen and (max-width: 768px) {
+    nav{
+      height: auto;
+      line-height: inherit;
+      padding: 4px;
+      position: static;
+      margin-top: -12.5%;
+    }
+  
+    nav .logo p{
+      float: none;
+      text-align: center;
+    }
+  
+    nav ul{
+      float: none;
+      text-align: center;
+      padding: 0;
+    }
+    nav li{
+      display: block;
+      margin-bottom: 10px;
+    }
+    nav li a{
+      display: block;
+      padding: 6px 0;
+    }
+    nav ul li ul{
+      position: static;
+      display: none;
+      background-color: #37e2e0 ;
+      border-radius: 0;
+    }
+    nav ul li:hover ul{
+      display: block;
+    }
+    nav ul li ul li{
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+                             /*end of navigation code*/
+
+.bgimage{
+   
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+.bgimage img{
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+}
+
+body{
+    padding-top: 85px; /* this value should be the same as the navbar height*/ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.imagetext{
+
+    position: absolute;
+    top: 13%;
+    left: 68%;
+    width: 25%;
+    background-color: rgb(0, 12, 47);
+    box-shadow: 5px 5px 10px rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.imagetext:hover{
+    background-color: #5cefad;
+}
+
+
+.imagetext h2{
+
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#head-1{
+    
+    text-transform: uppercase;
+    font-size: 40px; 
+    text-align: center;
+    color: white;
+
+    
+}
+
+.section1{
+    margin-top: -1.5%;
+    width: 100%;
+    background-color:rgb(0, 46, 77);
+    padding: 25px;
+    padding-top: 3px;
+    
+
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-top: 2%;
+    text-align: center;
+    color: #ff6b1b;
+    font-weight: bolder;
+
+}
+
+.text1{
+   
+   font-size: 22px;
+   padding: 20px;
+   color: rgb(4, 55, 73); 
+   text-align: center;
+}
+
+.text1:hover{
+    color: rgb(3, 74, 11);
+}
+
+ol li{
+    list-style-type:decimal;
+    
+    margin-left: 35%;
+}
+
+.olist li{
+    padding: 14px;
+}
+
+.subtext{
+   background-color: rgb(255, 238, 217);
+   font-size: 22px;
+   padding: 20px;
+   color: rgb(4, 55, 73); 
+   margin-left: 37%;
+   width: 25%;
+
+}
+
+
+.map2{
+    width: 325px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 6px 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    flex: 1 1 300px;
+    margin: 1% auto 3%;   
+    
+}
+
+.maphead h2{
+
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 2%;
+    text-align: center;
+    color: #845436;
+    text-transform: capitalize;
+
+}
+
+
+.imagemerge{
+    margin-top: -4%;
+    display: flex;
+    overflow: hidden;
+}
+.imagemerge img{
+    
+    /*object-fit: auto;*/
+    margin-top: -1.5%;
+    transition: transform 0.3s ease;
+  
+ }
+
+ .imagemerge:hover img{
+    transform: scale(1.1);
+ }
+
+
+
+
+ /*footer css*/
+footer{
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    padding:20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+
+
+/*media queries*/
+
+/*320-480px*/ 
+/* ##device = most of the smartphones mobiles(portrait)*/
+/*##screen = b/w 320px to 479px*/
+ @media (min-width: 320px) and (max-width: 480px) {
+
+    nav{
+        padding: 0px 20px;    
+        overflow: visible;
+        white-space: nowrap;
+    }
+   
+    nav .logo p{
+        font-size: 23px;
+    }
+    nav ul li a {
+        font-size: 9px;
+    }
+    .imagetext{
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+    .imagetext h2{
+        font-size: 18px;
+    }
+    .bgimage{
+        width: 100%;
+        height: auto;
+    }
+    #head-1{
+        font-size: 20px; 
+    }
+    .imagemerge{
+
+        margin-top: -18%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .subtext{
+        margin-left: 5%;
+        width: 90%;
+        
+    }
+
+    .map2{
+        width: 100%;
+    }
+
+    .container{
+        padding: 0px 10px;
+    }
+   
+    
+ }
+
+ /*1025 to 1280px*/
+ /*##device = laptops, desktops*/
+ @media (min-width: 1025px) and (max-width: 1280px){
+
+    body{
+        background-color: burlywood;
+    }
+
+    nav{
+        padding: 0px 80px;
+    }
+    nav .logo p{
+        font-size: 45px;
+    }
+    nav ul li a{
+        font-size: 21px;
+    }
+    .imagetext{
+        width: 30%;
+        left: 50%;
+        transform: translate(-140%, 140%);
+
+    }
+    .imagemerge{
+        margin-left: -8%;
+        margin-top: -6%;
+        
+    }
+
+    #h-2{
+        font-size: 65px;
+    }
+    .text1{
+        font-size: 42px;
+    }
+
+    h2{
+        font-size: 65px;
+    }
+    .subtext{
+        margin-left: 15%;
+        width: 70%;
+    }
+    .olist{
+        font-size: 42px;
+    }
+    .maphead h2 {
+        font-size: 65px;
+
+    }
+    .map2 .m2{
+        width: 100%;
+    }
+    #head-1{
+        font-size: 62px;
+    }
+ }
+
+ /*478 to 768px*/
+ /*##device = low resolution tablets, mobiles (landscape)*/
+ @media (min-width: 478px) and (max-width: 768px){
+
+    body{
+        padding-top: 135px;
+        background-color: #7ffdb5;
+    }
+
+    
+
+    .imagemerge{
+        margin-top: -12%;
+        flex-direction: column;
+       
+    }
+    
+
+    .imagetext{
+        top: 17%;
+        left:50%;
+        width: 80%;
+        padding:5px;
+    }
+
+    .container{
+        margin-left: 2%;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .text1, .subtext{
+        font-size: 18px;
+        padding: 10px;
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    ol li{
+        margin-left: 25%;
+    }
+    .map2{
+        width: 80%;
+        margin: 1% auto 5%;
+    }
+    .maphead h2{
+        font-size: 25px;
+    }
+
+    .section1 {
+
+        margin-top: -2%;
+        padding: 25px;
+        padding-top: 15px;
+
+    }
+
+ }
+ 
+
+ 
+
+
+
+
+  

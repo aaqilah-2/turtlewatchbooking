@@ -1,0 +1,443 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*start of navigation code*/
+
+
+nav{
+    
+    
+    width: 100%;
+    height: 85px;
+    top: 0; /*just added now*/
+    z-index: 1; /*just added now*/
+    line-height: 85px;
+    padding: 0px 100px; /*0px is for top & bottom, 100px is for left & right */
+    position: fixed;
+    background-image: linear-gradient(#18f0ec, #2ae3fb); /*in linear grad. can add min. 2 colors */
+     
+}
+nav .logo p{                  /* after nav if you don't put a space it does not work*/
+    font-size: 50px;
+    font-weight: bold;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-align: left;
+
+}
+nav ul{
+    float: right;
+}
+nav li{
+    display: inline-block;
+    list-style: none; /*bcus we don't want bullets */
+    
+}
+nav li a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10.5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    color:white;
+    text-decoration: none; /* links bydefault are underlined, so remove it*/
+    border-radius: 5px;
+}
+nav li a:hover{ /*the color that appears inside the nav link when you move your cursor over it*/
+    color: rgb(0, 0, 0);
+    transition: all 0.4s ease 0s;
+}
+
+a.active, a:hover{
+    background: rgb(1, 209, 237);
+    transition: all 0.4s ease 0s;
+    padding: 10px 10px;
+    
+}
+nav ul li ul{
+    position: absolute;
+    display: none;
+    background-color: #37e2e0;
+    border-radius: 0px 0px 5px 5px;
+
+}
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li{
+    line-height: 1;
+    width: 140px;
+    border-radius: 5px;
+    padding: 6px;
+    display: block;
+    margin-left: 15%;
+    padding-bottom: 15px;
+
+}
+nav ul li ul li a{
+    padding: 10px 16px;
+
+}
+nav ul li ul li a:hover{
+    background-color: rgb(1, 209, 237);
+
+}
+nav ul li a:hover{
+    background-color: rgb(1, 209, 237);
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+      height: auto;
+      line-height: inherit;
+      padding: 4px;
+      position: static;
+      margin-top: -12.5%;
+    }
+  
+    nav .logo p{
+      float: none;
+      text-align: center;
+    }
+  
+    nav ul{
+      float: none;
+      text-align: center;
+      padding: 0;
+    }
+    nav li{
+      display: block;
+      margin-bottom: 10px;
+    }
+    nav li a{
+      display: block;
+      padding: 6px 0;
+    }
+    nav ul li ul{
+      position: static;
+      display: none;
+      background-color: #37e2e0 ;
+      border-radius: 0;
+    }
+    nav ul li:hover ul{
+      display: block;
+    }
+    nav ul li ul li{
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+
+
+                             /*end of navigation code*/
+
+.bgimage{
+   
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+.bgimage img{
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+}
+
+body{
+    padding-top: 85px; /* this value should be the same as the navbar height*/ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.overlay1{
+    position: absolute;
+    bottom: 0;
+   
+    background: rgba(2, 0, 144, 0.263); /*black see-through*/
+   
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    padding: 20px;
+    text-align: left;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+           /*when u move mouse over the container, fade in the overlay title*/
+.bgimage:hover .overlay1{
+        opacity: 1;
+}
+
+.imagetext{
+
+    position: absolute;
+    top: 28%;
+    left: 58%;
+    width: 25%;
+    background-color: rgb(202, 185, 185);
+    box-shadow: 5px 5px 10px white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.imagetext:hover{
+    background-color: #a3e4e3;
+}
+
+
+.imagetext h2{
+
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/*form css*/
+
+.donform form{
+    width: 50%;
+    margin-left: 26%;  
+    text-align: center;
+}
+
+form{
+    border:5px solid #4fcfbe;
+    border-radius: 4px;   
+}
+
+textarea{
+    background-color: #b1dad5;
+}
+
+.donform h2{
+    margin-top: 2%;
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    text-align: center;
+}
+
+.donform label{
+    margin-left: 1%;
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.donform input[type="number"],
+.donform input[type="text"],
+.donform input[type="email"],
+.donform input[type="tel"],
+.donform textarea,
+.donform select {
+
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #b1dad5;
+
+}
+
+.donform textarea{
+    height: 100px;
+
+}
+
+.donform select{
+    margin-bottom: 10px;
+}
+
+.donform button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 93, 93);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.donform button:hover{
+    background-color: rgb(151, 216, 65);
+}
+
+/*donation type codes*/
+
+#text-li{
+    margin-left: 10%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+#d-1{
+    margin-left: 43%;
+    text-transform: capitalize;
+    font-size: 25px;
+    padding: 15px; /*adds gap between heading and text*/
+    color: #070066;
+    
+    
+}
+.type1 ul li{
+    margin-left: 3%;
+    padding-bottom: 3px;
+}
+.text
+{
+    margin-left: 10%;
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.type{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px;
+}
+#d-2{
+    margin-left: 43%;
+    text-transform: capitalize;
+    font-size: 25px;
+    padding: 15px; /*adds gap between heading and text*/
+    color: #070066;
+    
+    
+}
+.type2 ul li{
+    margin-left: 3%;
+    padding-bottom: 3px;
+}
+
+
+
+#d-3{
+    margin-left: 43%;
+    text-transform: capitalize;
+    font-size: 25px;
+    padding: 15px; /*adds gap between heading and text*/
+    color: #070066;   
+}
+
+#d-4{
+    margin-left: 35%;
+    text-transform: capitalize;
+    font-size: 25px;
+    padding: 15px; /*adds gap between heading and text*/
+    color: #070066;    
+}
+
+/*purchase merch code*/
+
+#merch-head{
+    font-size: 30px;
+    color: #0ff703;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#local-merch{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item{
+    margin: 50px;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    border: 3px solid rgb(63, 137, 96);
+
+}
+
+.item img{
+    margin-bottom: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.item h3{
+    margin: 5px 0;
+}
+
+.item p{
+    margin: 5px 0;
+}
+
+.item button{
+    border-radius: 4px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #4beae0;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bold;
+}
+.item button:hover {
+    background-color: rgb(141, 255, 27);   
+}
+
+/*footer css*/
+footer{
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    padding:20px;
+    text-align: left;
+    font-size: 15px;
+} 
+
+/*media queries*/
+
+@media screen and (max-width: 480px){
+    
+    body{
+        background-color: pink;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    body{
+        background-color: rgb(255, 183, 112);
+    }
+}
+
+
+
+
+
+

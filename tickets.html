@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="description" content="Average">
+        <title>Tickets page</title>
+        <link href="tickets.css" rel="stylesheet" >
+        </head>
+        <header>
+            <label class="logo">
+                BUY TICKETS
+            </label>
+        </header>
+    <body>
+        
+    <br><br>
+    
+     <div class="table-container">
+
+
+    <table>
+    <tr>
+        <th>Peak hours</th>
+    </tr>
+    <tr>
+        <td>10:00 am - 1:00 pm</td> 
+    </tr>
+    <tr>
+        <td>3:00 pm - 6:00pm</td>
+    </tr>
+    
+      </table><br>
+
+    <table>
+    <tr>
+        <th>Category</th>
+        <th>Price - per normal hour</th>
+        <th>Price - per peak hour</th>
+    </tr>
+    <tr>
+        <td>Local Adult</td>
+        <td>4 USD</td>
+        <td>6 USD</td>
+    </tr>
+    <tr>
+        <td>Local Child</td>
+        <td>2 USD</td>
+        <td>3 USD</td>
+    </tr>
+    <tr>
+        <td>Foreigner Adult</td>
+        <td>10 USD</td>
+        <td>13 USD</td>
+    </tr>
+    <tr>
+        <td>Foreigner Child</td>
+        <td>5 USD</td>
+        <td>8 USD</td>  
+    </tr>
+    <tr>
+        <td>Infant</td>
+        <td>Free</td>
+        <td>Free</td>
+    </tr>
+    </table>
+    </div>
+    <br><br><br>
+
+    <div class="container">
+    <div class="formcontainer">
+    <form onsubmit="calculateTotalAmountPayable()" get="details.html"  method="get" id="ticketsForm">
+        
+        <div class="form-control">
+        <label for="dateInput">When are you coming?</label>
+        <input type="date" id="dateInput" name="dateInput" required>
+        </div>
+
+        <div class="ticket-category">
+            <label for="localAdult">Local Adult:</label>
+            <input type="number" id="localAdult" name="localAdult" value="0"  min="0"  >
+        </div>
+
+        <div class="ticket-category">
+            <label for="localChild">Local Child:</label>
+            <input type="number" id="localChild" name="localChild" value="0"  min="0" >
+        </div>
+
+        <div class="ticket-category">
+            <label for="foreignerAdult">Foreigner Adult:</label>
+            <input type="number" id="foreignerAdult" name="foreignerAdult" value="0"  min="0" >   
+        </div>
+
+        <div class="ticket-category">
+            <label for="foreignerChild">Foreigner Child:</label>
+            <input type="number" id="foreignerChild" name="foreignerChild" value="0"  min="0" >
+        </div>
+
+        <div class="ticket-category">
+            <label for="infant">Infant:</label>
+            <input type="number" id="infant" name="infant" value="0"   min="0" >
+        </div>
+
+        <div class="form-control">
+                    <label for="duration">Duration:</label>
+                    <select id="duration" name="duration" multiple onchange="calculateTotalAmountPayable()">
+                        <option value="" selected disabled>Select a time slot</option>
+                        <option value="07:00 to 08:00">07:00 AM to 08:00 AM</option>
+                        <option value="08:00 to 09:00">08:00 AM to 09:00 AM</option>
+                        <option value="09:00 to 10:00">09:00 AM to 10:00 AM</option>
+                        <option value="10:00 to 11:00">10:00 AM to 11:00 AM</option>
+                        <option value="11:00 to 12:00">11:00 AM to 12:00 PM</option>
+                        <option value="12:00 to 13:00">12:00 PM to 01:00 PM</option>
+                        <option value="13:00 to 14:00">01:00 PM to 02:00 PM</option>
+                        <option value="14:00 to 15:00">02:00 PM to 03:00 PM</option>
+                        <option value="15:00 to 16:00">03:00 PM to 04:00 PM</option>
+                        <option value="16:00 to 17:00">04:00 PM to 05:00 PM</option>
+                        <option value="17:00 to 18:00">05:00 PM  to 06:00 PM</option>
+                    </select>
+                    
+        </div>
+        <br><br> 
+       
+
+        
+    <button type="button" value="submit" id="purchasebtn" disabled>Continue with purchase</button>
+
+    
+    </form><br>
+    
+    
+   
+    
+    </div>  <br><br> <br><br>
+    </div>
+    <!--summary table-->
+
+    <div class="container2">
+    <table id="ticketTable" >  
+    <tr>
+        <td>Date</td>
+        <td id="tableinputdate"></td>
+    </tr>
+    <tr>
+        <td>Time</td>
+        <td id="tableinputtime"></td>
+    </tr>
+    <tr>
+        <td>Duration</td>
+        <td id="tableinputduration"></td>
+    </tr>
+    <tr>
+        <th>Tickets</th>
+        <th>Charges</th>
+    </tr>
+    <tr id="rowlocaladult">
+        <td id="localadulttable"> Sl adult</td>
+        <td id="localadulttableprice"></td>
+    </tr>
+    <tr id="rowlocalchild">
+        <td id="localchildtable"> Sl child</td>
+        <td id="localchildtableprice"></td>
+    </tr>
+    <tr id="rowforiegnadult">
+        <td id="foriegnadulttable"> foreigner adult</td>
+        <td id="foriegnadulttableprice"></td>
+    </tr>
+    <tr id="rowforiegnchild">
+        <td id="foriegnchildtable"> foreigner child</td>
+        <td id="foriegnchildtableprice"></td>
+    </tr>
+    <tr id="rowinfant">
+        <td id="infanttable"> infant</td>
+        <td id="infanttableprice"></td>
+    </tr>
+    <tr>
+        <th>Total Payable </th>
+        <th id="totalPayableprice"> $0</th>
+    </tr>
+     </table></div>
+
+     <br><br><br><br>
+
+
+
+
+
+
+
+
+    <br><br><br>
+        <script src="trialtickets.js"> </script>
+    </body>
+</html>
